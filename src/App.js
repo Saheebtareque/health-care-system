@@ -7,6 +7,10 @@ import Home from './components/Home/Home';
 import Header from './components/Header/Header';
 import Footer from './components/Footer/Footer';
 import AuthProvider from './context/AuthProvider';
+import PrivateRoute from './components/PrivateRoute/PrivateRoute';
+import Booking from './components/Booking/Booking';
+import Subscription from './components/Subscription/Subscription';
+import DoctorDetail from './components/DoctorDetail/DoctorDetail';
 
 
 function App() {
@@ -25,6 +29,16 @@ function App() {
           <Route path="/login">
             <Login> </Login>
             </Route>
+            <PrivateRoute exact path="/service/:doctorId">
+            <DoctorDetail></DoctorDetail>
+          </PrivateRoute>
+            <PrivateRoute path="/booking">
+              <Booking></Booking>
+              </PrivateRoute>
+              <PrivateRoute path="/subscription">
+              <Subscription>
+              </Subscription>
+              </PrivateRoute>
             
             <Route path="*">
               <Notfound></Notfound>

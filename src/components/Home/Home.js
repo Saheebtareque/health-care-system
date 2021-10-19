@@ -4,11 +4,13 @@ import Services from './Services/Services';
 
 const Home = () => {
     return (
+
         <div id="home">
-        <Banner></Banner>
-        <Services></Services>
-        
-    </div>
+            <h1>Welcome</h1>
+            <Banner></Banner>
+            <Services></Services>
+
+        </div>
     );
 };
 
