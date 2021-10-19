@@ -6,12 +6,14 @@ import Notfound from './components/Notfound/Notfound';
 import Home from './components/Home/Home';
 import Header from './components/Header/Header';
 import Footer from './components/Footer/Footer';
+import AuthProvider from './context/AuthProvider';
 
 
 function App() {
   return (
     <div className="App">
-      <BrowserRouter>
+     <AuthProvider>
+     <BrowserRouter>
       <Header></Header>
         <Switch>
           <Route exact path="/">
@@ -30,6 +32,7 @@ function App() {
         </Switch>
         <Footer></Footer>
       </BrowserRouter>
+     </AuthProvider>
     </div>
   );
 }
